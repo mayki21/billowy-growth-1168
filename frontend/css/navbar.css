@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  /* border: 1px solid black; */
+  /* text-decoration: underline; */
+  /* color: #ff6d00; */
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffebee;
+}
+
+.navbar {
+  padding: 0 50px;
+  background-color: #ff6f003e;
+  /* color: #fff; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+  /* color: #fff; */
+  display: flex;
+  align-items: center;
+}
+.navbar-logo img {
+  width: 40px;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  /* color: #fff; */
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-menu li {
+  margin: 0 10px;
+}
+
+.navbar-menu a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.2s;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.navbar-menu a:hover {
+  /* color: white; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.navbar > div {
+  display: flex;
+}
+.navbar > div > div {
+  font-weight: bold;
+  display: flex;
+  padding: 0 15px;
+  margin: 0 10px;
+  border-radius: 8px;
+  /* background-color: #aaa; */
+}
+.navbar > div > div {
+  display: flex;
+  padding: 10px 15px;
+  margin: 0 10px;
+  /* background-color: #aaa; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  color: #ff6d00;
+}
+.hide-login {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+  .hide-login {
+    display: block;
+  }
+  #show_login {
+    display: none;
+  }
+  .navbar-menu {
+    border-top: 1px solid black;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: -20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #e3f2fd;
+  }
+
+  .navbar-menu-active {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+  }
+}
