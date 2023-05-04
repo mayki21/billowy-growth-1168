@@ -1,0 +1,387 @@
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+#container {
+    display: flex;
+    /* border: 10px solid blue; */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffebee;
+  }
+
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    height: 12%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: white; */
+    z-index: 2;
+    background-color: #ff6f003e;
+}
+
+#main-dash {
+    /* margin-top: 20px; */
+    margin-left: 25%;
+    /* min-height: max-content; */
+    right: 0px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+
+#main-dash+h1 {
+    font-size: larger;
+}
+
+#dash-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #570a00;
+    position: fixed;
+    left: 0;
+    /* bottom: 0; */
+    width: 23vw;
+    height: 100vh;
+    /* padding-top: 12%; */
+}
+
+#dash-menu>a {
+    text-decoration: none;
+    color: white;
+    margin: 20px 20px;
+}
+
+#dash-menu>a:hover {
+    background-color: #7ca962;
+}
+
+.timer-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 25px;
+}
+
+#dash-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 30px;
+    box-sizing: border-box;
+    /* margin-top: 40px; */
+}
+
+#dash-container>div {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 1rem;
+    padding:0.1rem 1rem 1rem 0.1rem;
+    height: 20vh;
+}
+
+#dash-container>div h3,
+#dash-container>div p {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#dash-container>div p {
+    margin-top: 40px;
+    /* font-size: large; */
+}
+
+#activity-popup {
+    display: none;
+    height: 20vh;
+    padding: 2rem;
+    background: #737779;
+    border-radius:1rem;
+    position: relative;
+    right:25rem;
+    top: 10rem;
+}
+
+#activity-popup>div{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.activity-button {
+    background-color: #4CAF50;
+    color: white;
+    padding:0.5rem 0.7rem ;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.activity-button:hover {
+    background-color: #3e8e41;
+}
+
+/* apps */
+#track-apps {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin-top: 20px;
+    /* position:relative; */
+    /* overflow:hidden; */
+    /* bottom: 0; */
+    
+}
+
+#productive-apps>div>h3 {
+    color: white;
+    background-color: #0aa230;
+    padding: 8px;
+    text-align: center;
+    /* font-size: medium; */
+}
+
+#unproductive-apps>div>h3 {
+    color: white;
+    background-color: #d01111;
+    padding: 8px;
+    text-align: center;
+    /* font-size: medium; */
+}
+
+#idle-apps>div>h3 {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 8px;
+    text-align: center;
+    /* font-size: medium; */
+}
+
+/* category container */
+#categories {
+    /* width: 200%; */
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#categories>h3 {
+    text-align: center;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px;
+    font-size: medium;
+}
+
+#category-data {
+    text-align: center;
+}
+
+#category-data>p {
+    color: gray;
+}
+
+/* css for categories list */
+
+.categories-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.office {
+    background-color: #007bff;
+}
+
+.social {
+    background-color: #28a745;
+}
+
+.entertainment {
+    background-color: #dc3545;
+}
+
+.email {
+    background-color: #ffc107;
+}
+
+.graph-container {
+    width: 40%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.bar.office {
+    background-color: #007bff;
+    padding-top: 70px;
+
+}
+
+.bar.social {
+    background-color: #28a745;
+    padding-top: 10px;
+
+}
+
+.bar.entertainment {
+    background-color: #dc3545;
+    padding-top: 20px;
+
+}
+
+.bar.email {
+    background-color: #ffc107;
+    padding-top: 25px;
+}
+
+.bar {
+    height: 30px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* css for chat box */
+#chat-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#chat-window {
+    display: none;
+    position: fixed;
+    bottom: 1.5%;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow-y: scroll;
+    padding: 10px;
+    z-index: 9998;
+}
+
+#message-display {
+    height: 300px;
+}
+
+#message-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+}
+
+/* logout under settings */
+.settings {
+    position: relative;
+    display: inline-block;
+    margin: 20px 20px;
+}
+.settings>a{
+    text-decoration: none;
+    color: white;
+}
+#logout-btn {
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.settings:hover #logout-btn {
+    display: block;
+}
+
+#arrival-time>p,#left-time>p,#productivity>p{
+    font-size: large;
+    color: green;
+    font-weight: bolder;
+}
+#productive-time>p,#desk-time>p,#time-at-work>p{
+    font-size: larger;
+    color: #ed3034;
+    font-weight: bolder;
+}
+#Unproductive>p,#idle>p{
+    color: #ff6633;
+    font-size: larger;
+    font-weight: bolder;
+}
+/* apps font css */
+#productive-data,#unproductive-data,#idle-data{
+    font-size: larger;
+    color: black;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 852px) {
+    html{
+        font-size: 55%;
+    }
+    #dash-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    #track-apps {
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html{
+        font-size: 25%;
+    }
+    #dash-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
