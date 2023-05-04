@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <a href="index.html" id="navbar-logo"
+        ><img src="images/logo new.png" alt="" />Timerlia</a
+      >
+    <div id="signupcont">
+        <div id="signupleft">
+            
+            <h1>Signup and start tracking</h1>
+            <p>Have an account? <a href="signin.html">Log in</a></p>
+            <form id="form">
+            <label for="name">First and last name:</label>
+            <input type="text" id="name" name="name" placeholder="Type in your first and last name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Type in your email address" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8">
+            <p>By signing up, you agree to our <a href="">terms</a> and <a href="">privacy policy.</a></p>
+            <button type="submit" id="submit-btn">SIGN UP FOR FREE</button>
+            </form>
+            <hr>
+            <span id="connect">Or connect with</span>
+            <div id="oauth">
+                <a id="google-auth-btn" href="#"><img
+                        src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png"
+                        alt="google"></a>
+                <a id="github-auth-btn" href=""><img id="github-logo"
+                        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/signup.js"></script>
+    </body>
+    </html>
+    
