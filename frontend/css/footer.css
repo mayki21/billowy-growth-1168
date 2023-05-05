@@ -1,0 +1,165 @@
+/* footer */
+
+.Footer {
+  text-align: center;
+  margin-top: 60px;
+  background-color: #f7fcff;
+  padding: 6% 0 2%;
+}
+
+.Footer h1 {
+  font-size: 40px;
+  line-height: 64px;
+  color: #3d4859;
+  font-weight: 400;
+}
+
+.Footer i {
+  font-size: 12px;
+  display: inline-block;
+  color: #3077bd;
+}
+.Footer i span {
+  padding-left: 5px;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  color: #3d5ebd;
+}
+.Footer i span:hover {
+  text-decoration: underline;
+}
+
+.footerList {
+  font-size: 14px;
+  color: #5f6d7b;
+  width: 25%;
+  margin: 25px auto 55px;
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.lastFooter {
+  border-top: 0.5px #dee9f1 solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 70%;
+  padding: 3% 0%;
+  margin: 140px auto 30px;
+  color: #5a6b7b;
+}
+
+.lastFooter > div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+  text-align: left;
+}
+
+.lastFooter > div:nth-child(1) a {
+  text-decoration: none;
+  color: #5a6b7b;
+  font-size: 16px;
+}
+
+.lastFooter b {
+  font-size: 18px;
+  color: #424853;
+}
+.lastFooter p {
+  font-size: 16px;
+}
+
+.lastFooter p:hover,
+.lastFooter p:hover {
+  color: #3077bd;
+  cursor: pointer;
+}
+
+.lastFooter i:nth-child(1) {
+  color: #3077bd;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.lastFooter i:nth-child(2) {
+  color: red;
+  font-size: 20px;
+}
+
+.last {
+  display: flex;
+
+  width: 40%;
+  margin-left: 20%;
+}
+
+.last > div {
+  flex-basis: 1;
+  margin: 0 15px;
+}
+
+.last > div:nth-child(1) {
+  flex-grow: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.last p {
+  font-size: 14px;
+  color: #83add7;
+  cursor: pointer;
+}
+
+.last p:hover {
+  color: #3077bd;
+}
+
+.last div:nth-child(1) p:hover {
+  color: #83add7;
+  cursor: initial;
+}
+@media screen and (max-width: 768px) {
+  .lastFooter {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .lastFooter > div {
+    /* text-align: center; */
+    margin: 20px;
+    /* width: 100%; */
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  .lastFooter > div > p {
+    text-decoration: underline;
+    /* text-align: center; */
+    /* margin: 20px; */
+    /* width: 100%; */
+    /* margin-bottom: 20px; */
+  }
+  .last {
+    flex-wrap: wrap;
+  }
+  .freebtn {
+    width: 80%;
+  }
+  .btn {
+    padding: 5px;
+    margin: 5px;
+  }
+  .Footer .mainHeading {
+    width: 80%;
+    margin: auto;
+    font-size: 22px;
+    /* margin-top: 100px; */
+  }
+  #stopwatch-container {
+    font-size: 14px;
+  }
+  .Footer > :first-child {
+    /* border: 2px solid red; */
+  }
+}
