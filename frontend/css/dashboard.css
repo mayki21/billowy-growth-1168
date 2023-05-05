@@ -49,22 +49,28 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: #570a00;
+    align-items: left;
     position: fixed;
     left: 0;
-    /* bottom: 0; */
     width: 23vw;
     height: 100vh;
-    /* padding-top: 12%; */
 }
 
 #dash-menu>a {
     text-decoration: none;
     color: white;
     margin: 20px 20px;
+    padding: .3rem .5rem;
+}
+
+#dash-menu>a>i {
+    font-size:0px;
 }
 
 #dash-menu>a:hover {
     background-color: #7ca962;
+    padding: .3rem .5rem;
+    border-radius:1rem;
 }
 
 .timer-container {
@@ -73,6 +79,23 @@ nav {
     gap: 1rem;
     font-size: 25px;
 }
+
+#timer-button{
+    border: none;
+    padding: 0.5rem 0.9rem;
+    margin: 2rem 0rem;
+    background-color: #d01111;
+    border-radius: 1rem;
+}
+
+#timer-button{
+    border: none;
+    padding: 0.5rem 0.9rem;
+    margin: 2rem 0rem;
+    background-color: #d01111;
+    border-radius: 1rem;
+}
+
 
 #dash-container {
     display: grid;
@@ -103,8 +126,9 @@ nav {
 
 #activity-popup {
     display: none;
-    height: 20vh;
-    padding: 2rem;
+    height: 80%;
+    padding: 1rem;
+    width:40%;
     background: #737779;
     border-radius:1rem;
     position: relative;
@@ -113,18 +137,22 @@ nav {
 }
 
 #activity-popup>div{
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr); */
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    flex-wrap: wrap;
+    gap:20px;
+    padding:1rem;
 }
 
 .activity-button {
     background-color: #4CAF50;
     color: white;
-    padding:0.5rem 0.7rem ;
+    padding:0.3rem 0.5rem ;
     border: none;
-    border-radius: 4px;
+    border-radius:100px;
     cursor: pointer;
-    margin-right: 10px;
+    width: 100%;
 }
 
 .activity-button:hover {
@@ -375,6 +403,9 @@ li {
     #track-apps {
         bottom: 0;
     }
+    #dash-menu{
+        width: 15vw;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -383,5 +414,21 @@ li {
     }
     #dash-container {
         grid-template-columns: repeat(1,1fr);
+    }
+    #dash-menu>a>i {
+        font-size:6rem;
+    }
+
+    #dash-menu>a>i:hover{
+        scale:1.5rem;
+    }
+
+    #dash-menu>a {
+        font-size:0px;
+    }
+    #dash-menu{
+        width: 15vw;
+        /* border: 2px solid red; */
+        align-items:center;
     }
 }
