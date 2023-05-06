@@ -28,6 +28,7 @@ body {
     display: flex;
 }
 
+
 #main-container{
     /* margin-top: 20px; */
     margin-left: 24%;
@@ -98,9 +99,7 @@ body {
 }
 
 #BarGraph {
-    width: 96%;
-    height: fit-content;
-    margin: auto;
+    width:100%;
 }
 
 
@@ -158,8 +157,7 @@ body {
 }
 
 #pie-graph-section {
-    width: 380px;
-    height: 380px;
+    width: 100%;
 }
 
 
@@ -170,9 +168,18 @@ body {
     height: fit-content;
 }
 
+
+
 .dataShow > .data-box {
     display: block;
 
+}
+
+.dataShow>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 
@@ -212,4 +219,52 @@ body {
 
 .data-box-detailed > p {
     margin: 10px;
+}
+
+
+
+
+@media screen and (max-width: 852px) {
+    html{
+        font-size: 55%;
+    }
+    #dash-menu{
+        width: 15vw;
+    }
+    .pie-chart-main-section {
+        flex-direction: column;
+    }
+    .pie-chart-left-section{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html{
+        font-size: 25%;
+    }
+    /* #dash-container {
+        grid-template-columns: repeat(1,1fr);
+    } */
+    #dash-menu>a>i {
+        font-size:6rem;
+    }
+
+    #BarGraph{
+        width:100%;
+        box-sizing: content-box;
+    }
+
+    #dash-menu>a>i:hover{
+        scale:1.5rem;
+    }
+
+    #dash-menu>a {
+        font-size:0px;
+    }
+    #dash-menu{
+        width: 15vw;
+        /* border: 2px solid red; */
+        align-items:center;
+    }
 }
