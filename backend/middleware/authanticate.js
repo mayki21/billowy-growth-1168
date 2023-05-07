@@ -1,4 +1,4 @@
-const { client } = require("../configs/redis");
+const { client } = require("../config/redis");
 const jwt = require("jsonwebtoken")
 
 const authanticate = async (req,res,next)=>
@@ -32,4 +32,4 @@ const authanticate = async (req,res,next)=>
     }
 }
 
-module.exports={authanticate}
+module.exports=authanticate
