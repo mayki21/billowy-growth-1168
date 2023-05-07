@@ -16,8 +16,7 @@ const generateOtpAndSendEmail = (email,otp) => {
 
 
         
-        const mailOptions = 
-        {
+        const mailOptions = {
             from: process.env.nodemailerEmail,
             to: email,
             subject: "Verification OTP",
