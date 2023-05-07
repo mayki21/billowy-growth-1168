@@ -6,7 +6,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
     }
    console.log(payload);
    
-    fetch(`http://localhost:8000/user/login`,{
+    fetch(`http://localhost:8008/user/login`,{
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -16,7 +16,8 @@ document.getElementById("form").addEventListener("submit", (e) => {
     .then(res=>res.json())
     .then(res=>{
         console.log(res);
-        if(res.msg==="login successful"){
+        if(res.msg==="login successful")
+        {
 
             alert(res.msg)
 
@@ -26,9 +27,12 @@ document.getElementById("form").addEventListener("submit", (e) => {
             localStorage.setItem("token",res.token)
             window.open("dashboard.html")
 
-        }else if(res.error){
+        }
+        else if(res.error)
+        {
             alert(res.error)
-        }else{
+        }
+        else{
             alert(res.msg)
         }
     })
