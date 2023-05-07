@@ -3,6 +3,7 @@ const jwt=require("jsonwebtoken")
 require("dotenv").config()
 const otpgen=require("otp-generator")
 const client=require("../config/redis")
+const generateOtpAndSendEmail=require("../nodemailer")
 const usermodel=require("../model/user.model")
 const userrout=express.Router()
 
