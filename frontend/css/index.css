@@ -205,8 +205,53 @@
 }
 
 .midldeBox * {
+  /* width: %; */
+  /* margin: auto; */
   display: block;
   line-height: 40px;
+}
+
+.mid-part {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 2%;
+  margin-bottom: 50px;
+  margin-top: 110px;
+}
+
+.left-side {
+  width: 70%;
+  padding-top: 5%;
+  padding-left: 2%;
+}
+
+.left-side > h1,
+p {
+  margin-bottom: 3%;
+}
+
+.left-part-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+}
+
+.left-part-child > div {
+  background-color: white;
+  padding: 4%;
+}
+
+.left-part-child > div > h3 {
+  /* margin-bottom: 5%; */
+}
+
+.right-side {
+  width: 30%;
+}
+
+.right-side img {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -243,5 +288,29 @@
   }
   .middle {
     padding-bottom: 0px;
+  }
+  .mid-part {
+    flex-direction: column-reverse;
+  }
+  .right-side {
+    width: 80%;
+    margin: auto;
+  }
+  .left-part-child {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5%;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+  .left-part-child > div {
+    width: 100%;
+    background-color: white;
+    padding: 4%;
+    /* border: 1px solid red; */
+  }
+  .left-side {
+    width: 100%;
   }
 }
