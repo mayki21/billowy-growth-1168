@@ -1,4 +1,4 @@
-const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer")
 require("dotenv").config()
 
 
@@ -6,7 +6,7 @@ const generateOtpAndSendEmail = (email,otp) => {
     try {
 
         let transporter = nodemailer.createTransport({
-            service: 'gmail',
+            service: "gmail",
             auth: 
             {
                 user: process.env.nodemailerEmail,
@@ -47,4 +47,4 @@ const generateOtpAndSendEmail = (email,otp) => {
     }
 }
 
-module.exports = { generateOtpAndSendEmail }
+module.exports=generateOtpAndSendEmail 

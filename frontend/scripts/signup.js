@@ -20,16 +20,19 @@ let form1 = document.getElementById("form");
         .then((res) => {
             if(res.msg === "SignUp successful") 
             {
-                window.open("signin.html");
+                // window.open("signin.html");
+                window.open("./sigin.html");
                
             } 
             else if(res.msg === "user is already register") 
             {
                 alert("user already register");
-                window.open("signin.html");
+                // window.open("signin.html");
+                window.open("./signin.html");
             }
             else{
-                window.open("otp.html");
+                // window.open("otp.html");
+                window.open("./otp.html");
                 localStorage.setItem("userInfo", JSON.stringify(payload));
             }
         })
