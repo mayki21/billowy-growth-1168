@@ -30,7 +30,7 @@ userrout.post("/signup",async(req,res)=>{
      }
      else if (clientSideOtp===otp)
       {
-        const hashPassword = await bcrypt.hash(password, +process.env.saltRound)
+        const hashPassword = await bcrypt.hash(password,+process.env.saltRound)
         await new usermodel({ name, email, password: hashPassword, role }).save()
         return res.send({"msg":"SignUp successful"})
 
