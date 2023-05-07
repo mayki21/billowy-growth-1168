@@ -1,9 +1,10 @@
 const express=require("express")
 const jwt=require("jsonwebtoken")
+const bcrypt=require("bcrypt")
 require("dotenv").config()
 const otpgen=require("otp-generator")
-const client=require("../config/redis")
-const generateOtpAndSendEmail=require("../nodemailer")
+const {client}=require("../config/redis")
+const {generateOtpAndSendEmail}=require("../nodemailer")
 const usermodel=require("../model/user.model")
 const userrout=express.Router()
 
@@ -23,15 +24,15 @@ userrout.post("/signup",async(req,res)=>{
      }
      if(clientSideOtp===undefined)
      {
-        const otp=otpgen.generate(4,{lowerCaseAlphabets:false,upperCaseAlphabets:false,specialChars:false})
-        await client.setEx("otp",60*30,otp)
+        const otp=otpgen.generate(4,{lowerCaseAlphabets: false, upperCaseAlphabets: false, specialChars: false })
+        await client.set("otp",otp,"EX",60*30)
         generateOtpAndSendEmail(email, otp)
 
      }
      else if (clientSideOtp===otp)
       {
-        const hashPassword = await bcrypt.hash(password,+process.env.saltRound)
-        await new usermodel({ name, email, password: hashPassword, role }).save()
+        const hashPassword = await bcrypt.hash(password, +process.env.saltRound)
+        await new usermodel({name, email, password: hashPassword,role}).save()
         return res.send({"msg":"SignUp successful"})
 
       } 
@@ -44,8 +45,8 @@ userrout.post("/signup",async(req,res)=>{
     } 
     
     
-    catch (error)
-    {
+    catch (error){
+        console.log(error)
         res.send({"error":error.message})
     }
 
@@ -69,7 +70,7 @@ userrout.post("/login", async (req, res) => {
                 const refreshToken = jwt.sign({ userId: user._id , role:user.role }, process.env.jwtRefreshSecretKey, { expiresIn: "10d" })
                 res.cookie("token", token)
                 res.cookie("refreshToken", refreshToken)
-                res.send({ "msg": "login successfully done","name": user.name})
+                res.send({ "msg": "login successful","name": user.name})
             } 
             else
             {

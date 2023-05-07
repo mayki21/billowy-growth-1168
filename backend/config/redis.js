@@ -8,4 +8,4 @@ let configuration={
 }
 const client=new Redis(configuration)
 
-module.exports=client
+module.exports={client}
