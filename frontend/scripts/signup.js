@@ -1,14 +1,14 @@
 let form1 = document.getElementById("form");
 
 
-  form1.addEventListener("submit", (e) =>
-   {
+  form1.addEventListener("submit", (e) =>{
         e.preventDefault();
             const payload = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         password: document.getElementById("password").value
     };
+    console.log(payload)
     fetch(`http://localhost:8008/user/signup`, {
         method: "POST",
         headers: {

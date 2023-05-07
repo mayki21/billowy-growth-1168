@@ -5,7 +5,7 @@ require("dotenv").config()
 const generateOtpAndSendEmail = (email,otp) => {
     try {
 
-        let transporter = nodemailer.createTransport({
+        let transporter=nodemailer.createTransport({
             service: "gmail",
             auth: 
             {
@@ -16,7 +16,7 @@ const generateOtpAndSendEmail = (email,otp) => {
 
 
         
-        const mailOptions = {
+        const mailOptions={
             from: process.env.nodemailerEmail,
             to: email,
             subject: "Verification OTP",
@@ -25,12 +25,11 @@ const generateOtpAndSendEmail = (email,otp) => {
 
 
         
-        transporter.sendMail(mailOptions, (error, info) =>
-        {
+        transporter.sendMail(mailOptions, (error, info)=>{
             if (error) 
             {
                 console.log(error);
-                // res.send({ "msg": error.message })
+               
             }
             else 
             {
@@ -41,9 +40,9 @@ const generateOtpAndSendEmail = (email,otp) => {
     }
     catch (error) 
     {
-        // res.send({ "error": error.message })
+        
         console.log(error);
     }
 }
 
-module.exports=generateOtpAndSendEmail 
+module.exports={generateOtpAndSendEmail} 

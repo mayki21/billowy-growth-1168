@@ -25,7 +25,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
 
 
             localStorage.setItem("token",res.token)
-            window.open("dashboard.html")
+            window.location.href="dashboard.html";
 
         }
         else if(res.error)
