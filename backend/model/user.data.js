@@ -13,3 +13,5 @@ const userDataSchema = mongoose.Schema({
 const userDataModel=mongoose.model("time", userDataSchema)
 
 module.exports=userDataModel
+
+// arrivalTime,productiveTimeElapsed,unproductiveTimeElapsed,idleTimeElapsed,deskTimeElapsed,timeAtWorkTimeElapsed
