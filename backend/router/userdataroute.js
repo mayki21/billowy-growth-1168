@@ -56,17 +56,21 @@ datarout.delete("/deleteUser/:id", async (req, res) => {
 });
 
 datarout.get("/employees", async (req, res) => {
-  try {
-    let userInfo = await userModel.find();
-    if (userInfo) {
-      res.json(userInfo);
-    } else {
-      res.send({ msg: "no users present" });
+
+    try {
+        let userInfo = await usermodel.find()
+        if (userInfo) {
+            res.json(userInfo)
+        } else {
+            res.send({"msg":"no users present"})
+        }
     }
-  } catch (err) {
-    console.log(err);
-    res.send({ msg: "error" });
-  }
+    catch (err) {
+        console.log(err);
+        res.send({ "msg": "error" })
+
+    }
+
 });
 
 module.exports = datarout;

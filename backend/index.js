@@ -20,7 +20,7 @@ app.get("/",authenticate,(req,res)=>{
 
 app.use("/user",userrouter)
 
-app.use("/app",dataroute)
+app.use("/app",authenticate,dataroute)
 
 app.listen(process.env.port, async()=>{
     await connection
