@@ -107,10 +107,12 @@ nav {
 }
 
 #dash-container>div {
+    font-size: 0.5rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 1rem;
     padding:0.1rem 1rem 1rem 0.1rem;
-    height: 20vh;
+    height: 130px;
+    background-color: white;
 }
 
 #dash-container>div h3,
@@ -137,8 +139,6 @@ nav {
 }
 
 #activity-popup>div{
-    /* display: grid;
-    grid-template-columns: repeat(3,1fr); */
     display: grid;
     flex-wrap: wrap;
     gap:20px;
@@ -161,39 +161,42 @@ nav {
 
 /* apps */
 #track-apps {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     margin-top: 20px;
-    /* position:relative; */
-    /* overflow:hidden; */
-    /* bottom: 0; */
-    
+    gap: 1rem;
 }
 
-#productive-apps>div>h3 {
+#productive-apps{
+    /* border: 2px solid rgb(0, 0, 0); */
     color: white;
     background-color: #0aa230;
-    padding: 8px;
-    text-align: center;
-    /* font-size: medium; */
+    border-radius: 1rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding:1rem;
 }
 
-#unproductive-apps>div>h3 {
+#unproductive-apps{
+    /* border: 2px solid rgb(0, 0, 0); */
+    padding: .5rem;
+    border-radius:1rem;
     color: white;
     background-color: #d01111;
-    padding: 8px;
-    text-align: center;
-    /* font-size: medium; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding:1rem;
 }
 
-#idle-apps>div>h3 {
-    color: white;
-    background-color: rgb(0, 0, 0);
-    padding: 8px;
-    text-align: center;
-    /* font-size: medium; */
+#idle-apps{
+    /* border: 2px solid rgb(0, 0, 0); */
+    padding: .5rem;
+    border-radius:1rem;
+    color: rgb(255, 255, 255);
+    background-color: #1640e6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding:1rem;
 }
+
 
 /* category container */
 #categories {
@@ -402,6 +405,7 @@ li {
     }
     #track-apps {
         bottom: 0;
+        grid-template-columns: repeat(1,1fr);
     }
     #dash-menu{
         width: 15vw;
