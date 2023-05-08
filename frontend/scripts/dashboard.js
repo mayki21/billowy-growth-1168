@@ -112,9 +112,19 @@ var screenTime;
 var screenTimeString
 
 window.onload = function () {
-    screenTime = new Date();
-    screenTimeString = screenTime.toLocaleTimeString();
+    let showLoggedUser=document.getElementById("showLoggedUser")
+    let nameOfUser=localStorage.getItem("loggedUser")
+    if(nameOfUser){
+        showLoggedUser.innerText=nameOfUser.split(" ")[0].toUpperCase()
+    }
 };
+
+document.getElementById("toLogoutUser").addEventListener("click",(e)=>{
+    e.preventDefault()
+    window.location.href="index.html"
+    localStorage.clear()
+})
+
 
 
 
@@ -358,41 +368,41 @@ idleButton.addEventListener("click", () => {
 
 
 // for chat box
-const chatBtn = document.getElementById("chat-btn");
-const chatWindow = document.getElementById("chat-window");
-const messageDisplay = document.getElementById("message-display");
-const messageInput = document.getElementById("message-input");
+// const chatBtn = document.getElementById("chat-btn");
+// const chatWindow = document.getElementById("chat-window");
+// const messageDisplay = document.getElementById("message-display");
+// const messageInput = document.getElementById("message-input");
 
 
-const socket = new WebSocket("ws://localhost:8000");
+// const socket = new WebSocket("ws://localhost:8000");
 
 
-socket.onopen = function (event) {
-    console.log("WebSocket connection opened:", event);
-};
+// socket.onopen = function (event) {
+//     console.log("WebSocket connection opened:", event);
+// };
 
 
-socket.onmessage = function (event) {
-    console.log("WebSocket message received:", event.data);
-    messageDisplay.innerHTML += "<p>" + event.data + "</p>";
-};
+// socket.onmessage = function (event) {
+//     console.log("WebSocket message received:", event.data);
+//     messageDisplay.innerHTML += "<p>" + event.data + "</p>";
+// };
 
 
-socket.onerror = function (event) {
-    console.error("WebSocket error:", event);
-};
+// socket.onerror = function (event) {
+//     console.error("WebSocket error:", event);
+// };
 
 
-messageInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        const message = messageInput.value;
-        console.log("Sending message:", message);
-        socket.send(message);
-        messageInput.value = "";
-    }
-});
+// messageInput.addEventListener("keydown", function (event) {
+//     if (event.key === "Enter") {
+//         event.preventDefault();
+//         const message = messageInput.value;
+//         console.log("Sending message:", message);
+//         socket.send(message);
+//         messageInput.value = "";
+//     }
+// });
 
-chatBtn.addEventListener("click", function () {
-    chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
-});
+// chatBtn.addEventListener("click", function () {
+//     chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+// });
