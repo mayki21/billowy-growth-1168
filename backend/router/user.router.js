@@ -70,6 +70,7 @@ userrout.post("/login", async (req, res) => {
                 const refreshToken = jwt.sign({ userId: user._id , role:user.role }, process.env.jwtRefreshSecretKey, { expiresIn: "10d" })
                 res.cookie("token", token)
                 res.cookie("refreshToken", refreshToken)
+                res.cookie("email",email)
                 res.send({ "msg": "login successful","name": user.name})
             } 
             else

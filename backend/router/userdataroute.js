@@ -41,7 +41,7 @@ datarout.delete("/deleteUser/:id", async (req, res) => {
 
 datarout.get("/employees", async (req, res) => {
     try {
-        let userInfo = await userModel.find()
+        let userInfo = await usermodel.find()
         if (userInfo) {
             res.json(userInfo)
         } else {

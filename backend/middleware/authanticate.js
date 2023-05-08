@@ -5,7 +5,8 @@ const authanticate = async (req,res,next)=>
 {
     try
      {
-        const token=req.cookies("token")
+        const {token}=req.cookies
+        const {email}=req.cookies
         const blacklist=await client.get("blacklist")
 
         if(token==blacklist)
@@ -19,6 +20,7 @@ const authanticate = async (req,res,next)=>
         {
             req.body.userId= decoded.userId
             req.body.role= decoded.role
+            req.body.email=email
             next()
         }
         else
