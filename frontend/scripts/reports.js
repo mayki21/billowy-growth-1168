@@ -43,6 +43,7 @@ window.onload=()=>{
       });
 
     find_percentage()
+    showname()
 }
 
 
@@ -57,17 +58,13 @@ function find_percentage(){
 }
 
 
-// var canvas = document.getElementById('BarGraph');
-// var heightRatio = 1.5;
-// canvas.height = canvas.width * heightRatio;
-
-window.onload = function () {
-  let showLoggedUser=document.getElementById("showLoggedUser")
-  let nameOfUser=localStorage.getItem("loggedUser")
-  if(nameOfUser){
-      showLoggedUser.innerText=nameOfUser.split(" ")[0].toUpperCase()
-  }
-};
+function showname(){
+    let showLoggedUser=document.getElementById("showLoggedUser")
+    let nameOfUser=localStorage.getItem("loggedUser")
+    if(nameOfUser){
+        showLoggedUser.innerText=nameOfUser.split(" ")[0].toUpperCase()
+    }
+}
 
 document.getElementById("toLogoutUser").addEventListener("click",(e)=>{
   e.preventDefault()
