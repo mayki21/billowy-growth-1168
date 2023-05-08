@@ -158,14 +158,14 @@ timerButton.addEventListener("click", () => {
         timerButton.textContent = 'Start';
         stopFunction();
         const payload = {
-            arrivalTime,
+            startTime,
             productiveTimeElapsed,
             unproductiveTimeElapsed,
             idleTimeElapsed,
             deskTimeElapsed,
             timeAtWorkTimeElapsed
         }
-        fetch(`http://localhost:8000/app/myTimeFrame`, {
+        fetch(`http://localhost:8008/app/myTimeFrame`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -176,18 +176,12 @@ timerButton.addEventListener("click", () => {
 
                 if (res.data) {
                     console.log(res.data);
-                    // let starttime = res.data[0].startTime
                     localStorage.setItem("starttime", res.data[0].startTime)
-                    // let productivetime = res.data[0].productiveTimeElapsed
                     localStorage.setItem("productivetime", res.data[0].productiveTimeElapsed)
-                    // let unproductivetime = res.data[0].unproductiveTimeElapsed
                     localStorage.setItem("unproductivetime", res.data[0].unproductiveTimeElapsed)
-                    // let idletime = res.data[0].idleTimeElapsed
                     localStorage.setItem("idletime", res.data[0].idleTimeElapsed)
-                    // deskTime.textContent= res.data[0].deskTimeElapsed + parts[1]
                     localStorage.setItem("desktime", res.data[0].deskTimeElapsed)
                     localStorage.setItem("timeatwork", res.data[0].timeAtWorkTimeElapsed)
-                    // localStorage.setItem("productivity",res.data[0].productivityData)
                 }
 
                 console.log(res);
