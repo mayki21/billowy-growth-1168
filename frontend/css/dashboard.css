@@ -186,8 +186,8 @@ nav {
     border: 2px solid rgb(0, 0, 0);
     padding: .5rem;
     border-radius:1rem;
-    color: white;
-    background-color: #000000;
+    color: rgb(255, 255, 255);
+    background-color: #1640e6;
 }
 
 
