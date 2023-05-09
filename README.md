@@ -1,13 +1,13 @@
-# billowy-growth-1168
+<!-- # billowy-growth-1168 -->
 
-#Timeria
+# Timeria
 
 #A real-time time tracking application is a software tool that allows users to accurately and automatically track the time spent on various tasks and projects in real-time. These applications are commonly used by businesses and professionals to manage their time effectively and improve productivity
 
 TECH STACK USED:
 NODEJS | MongoDB | Express | HTML | CSS | JAVASCRIPT
 
-Landing page
+# Landing page
 
 
 ![one](https://user-images.githubusercontent.com/119392202/236996149-0fee0fff-745b-4b29-8e26-a64d3dea430e.PNG)
@@ -19,23 +19,23 @@ Landing page
 
 ![three](https://user-images.githubusercontent.com/119392202/236996293-e39911e7-3c39-407e-8e5c-54930f37eceb.PNG)
 
-Sign up page
+# Sign up page
 
 ![four](https://user-images.githubusercontent.com/119392202/236996361-346dd199-023f-4e4c-98f6-d7e49ba498f0.PNG)
 
-OTP page
+# OTP page
 
 ![five](https://user-images.githubusercontent.com/119392202/236996466-257b04b3-4a3b-42e5-838e-6ad630951ec6.PNG)
 
-Login page
+# Login page
 
 ![six](https://user-images.githubusercontent.com/119392202/236996546-6cf6f03e-4721-4c06-b086-8b470078d3cc.PNG)
 
-Dashboard page
+# Dashboard page
 
 ![eight](https://user-images.githubusercontent.com/119392202/236996662-6a2fbc71-fb62-4337-8ae9-0bf103aeacb3.PNG)
 
-Reports page(Graph & Pie chart)
+# Reports page(Graph & Pie chart)
 
 ![ten](https://user-images.githubusercontent.com/119392202/236996760-b678db8b-affa-47e3-98b9-a89c4fcb4ba1.PNG)
 
