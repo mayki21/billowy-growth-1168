@@ -43,7 +43,7 @@ NODEJS | MongoDB | Express | HTML | CSS | JAVASCRIPT
 
 
 # Group Members
-### Mayank kiran khobragade
+### Mayank Kiran Khobragade (Team lead)
 ### Pranay Mishra
 ### Harpreet Singh
 ### Siddharth Kumar
